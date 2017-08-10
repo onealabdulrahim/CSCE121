@@ -1,0 +1,79 @@
+(Print this page as a cover sheet for your printouts) 
+HOMEWORK 5 
+Section: ______________ 
+Due: 11:59 P.M. Wednesday, March 23, 2016
+
+"On my honor, as an Aggie, I have neither given nor received any
+unauthorized aid on any portion of the academic work included in this
+assignment."
+
+
+________________________________	________________________________
+Typed or printed name of student	Signature of student
+
+NOTE:  Please follow your lab instructor's directions for submitting your 
+assignment through CSNET.  ONLY ASSIGNMENTS SUBMITTED TO CSNET WILL BE GRADED!
+Make a printout of each source file and staple it behind this cover sheet, 
+unless your lab instructor directs otherwise.  Sign it and give it to your TA 
+in lab or put it in your TA's mailbox in the corner of the 3rd floor of HRBB, 
+near room 312, by 5:00 P.M. Thursday.  IF YOU DO NOT TURN IN A SIGNED COVER 
+SHEET YOUR WORK WILL NOT BE GRADED!
+
+NOTE:  Homework will be graded on build.tamu.edu using g++ 5.3.0 with 
+-std=c++14.  You are free to develop your programs on Visual C++ or any other 
+platform, but it is your responsibility to make sure your programs also compile
+and execute correctly on build.tamu.edu using g++ -std=c++14.
+
+NOTE:  Each file submitted (hw5pr1.cpp, etc.--see below) must begin as follows:
+//Your Name
+//CSCE 121-xxx (fill in your section number)
+//Due: March 23, 2016 (or whatever the due date is)
+//hw5pr1.cpp (or whatever this file name is)
+
+The grade for this lab will be based on style (formatting, variable names, 
+comments, etc.), syntax (no compilation or link errors), and correctness 
+(passes all test cases).  Follow the style guide at
+http://www.stroustrup.com/Programming/PPP-style.pdf. Your grade for this lab is:
+
+ Problem #        1       2       3
+ Style             /2      /4      /2
+ Syntax            /3      /6      /3
+ Correctness       /5      /10     /5
+ -------------------------------------------------------------------
+ Total             /10     /20     /10
+
+ Grand total _____/30
+
+1. (10 points)  Exercise 7 at the end of Chapter 12.  Name your program hw5pr1.cpp.  
+Use several colors and feel free to be creative!
+
+Draw a two-dimensional house seen from the front, the way a child would: with a door, two
+windows, and a roof with a chimney. Feel free to add details; maybe have “smoke” come out of
+the chimney.
+
+2. (20 points)  Write a program named hw5pr2.cpp to draw a correct Texas flag 
+using rectangles, closed polylines, and/or polygons (not images).  To draw a white 
+5-pointed star, first do a little trig to calculate the vertices and then map 
+those points to window coordinates.  Note: The official proportions of the Texas
+flag are as follows: each colored panel (red, white, and blue) has dimensions 
+in the ratio 1 to 2, e.g., the blue panel is twice as tall as it is wide.
+
+OPTIONAL EXTRA CREDIT
+=====================
+3. (10 points) Write a C++/FLTK program that draws a checkerboard with
+pieces.  The image at
+
+http://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Draughts.svg/
+220px-Draughts.svg.png
+
+should serve as the model for your program. For the checker
+pieces, make them white and red, with a black outline, as shown in
+the picture. For the board, you will need to create your own Color
+objects. Look up the RGB values for "moss green" and "cherry blossom
+pink"; use them for the background board like this:
+
+Color moss_green(fl_rgb_color(R,G,B));
+
+Change the color of the green squares to "moss green" and change the
+cream-colored squares to "cherry blossom pink."  Name your program
+hw5pr3.cpp.
