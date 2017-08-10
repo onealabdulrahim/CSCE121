@@ -1,0 +1,80 @@
+(Print this page as a cover sheet for your printouts)
+
+CSCE 121 HOMEWORK 3
+Dr. Daugherity
+Section: ______________ 
+Due: 11:59 P.M. Tuesday, February 16, 2016
+
+"On my honor, as an Aggie, I have neither given nor received any unauthorized 
+aid on any portion of the academic work included in this assignment."
+
+
+________________________________	________________________________
+Typed or printed name of student	           Signature of student
+
+NOTE:  Please follow your lab instructor's directions for submitting your 
+assignment through CSNET.  ONLY ASSIGNMENTS SUBMITTED TO CSNET WILL BE GRADED!
+Make a printout of each source file and staple it behind this cover sheet, 
+unless your lab instructor directs otherwise.  Sign it and give it to your TA 
+in lab or put it in your TA's mailbox in the corner of the 3rd floor of HRBB, 
+near room 312, by 5:00 P.M. Wednesday.  IF YOU DO NOT TURN IN A SIGNED COVER 
+SHEET YOUR WORK WILL NOT BE GRADED!
+
+NOTE:  Homework will be graded on build.tamu.edu using g++ 5.3.0 with 
+-std=c++14.  You are free to develop your programs on Visual C++ or any other 
+platform, but it is your responsibility to make sure your programs also compile
+and execute correctly on build.tamu.edu using g++ -std=c++14.
+
+NOTE:  Each file submitted (hw3pr1.cpp, etc.--see below) must begin as follows:
+//Your Name
+//CSCE 121-xxx (fill in your section number)
+//Due: February 16,  2016 (or whatever the due date is)
+//hw3pr1.cpp (or whatever this file name is)
+
+The grade for this lab will be based on style (formatting, variable names, 
+comments, etc.), syntax (no compilation or link errors), and correctness 
+(passes all test cases).  Follow the style guide at
+http://www.stroustrup.com/Programming/PPP-style.pdf. Your grade for this lab is:
+Problem #	 1       2       3       4 
+Style             /2      /4      /4      /2 
+Syntax            /3      /6      /6      /3 
+Correctness       /5      /10     /10     /5
+-------------------------------------------------------------------
+Total             /10     /20     /20     /10
+Grand total _____/50
+
+1. (10 points)  Write a program name hw3pr1.cpp which reads a list of doubles
+terminated by end of file into a vector and prints the mean (or average) and the
+standard deviation (look up the formula and tell where you got it in a
+comment).  Print an appropriate message if the list is empty.
+
+2. (20 points)  Use your my_cbrt_2 function from hw2pr4 to define a more 
+accurate cube root for all values of n using this pseudocode:
+    double my_cbrt_3(double n) 
+	If n is zero return zero.
+	If n is negative return -my_cbrt_3(-n).
+	Otherwise,
+		set x to my_cbrt_2(n)
+		do this 10 times: x = (2/3)x + n/(3*x*x)
+		return x
+
+Write a main which repeatedly reads a number n and prints cbrt(n), 
+my_cbrt_3(n), and the relative error of my_cubrt_3(n).  Name your program
+hw3pr2.cpp.  (The relative error should be quite small.)
+
+3. (20 points) Write the fibonacci function described in Exercise 3 at the end 
+of Chapter 8, and a main which reads x, y, and n, calls fibonacci to fill the 
+vector, and then prints the ratio of the last element of v divided by the next 
+to last element.  For example, an input of 1 2 7 prints a ratio of 1.61538.
+Fun fact: No matter what x and y are, the larger n is, the closer the ratio is 
+to the golden mean.  Name your program hw3pr3.cpp.
+
+OPTIONAL EXTRA CREDIT 
+=====================
+4. (10 points)  In problem 2 the loop doesn't need to be executed 10 times for
+maximum accuracy.  Write a program named hw3pr4.cpp to determine the smallest
+number k such that looping k times is just as accurate as looping 10 times.
+Hint: For k = 1 to 10, find the maximum relative error for n from 1/8 to 1
+in steps of 1/1024.  Use those 10 numbers to determine the smallest
+number k such that looping k times is just as accurate as looping 10 times.
+Name your program hw3pr4.cpp. 
