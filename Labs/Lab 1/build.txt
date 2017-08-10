@@ -1,0 +1,13 @@
+-open putty
+-build.tamu.edu
+-ls
+-mkdir CSCE121
+-cd CSCE121
+-vi hello_world.cpp
+-i
+-type code for hello world (#include <iostream>)
+-esc
+-shift + semicolon (;) wq
+-g++ -std=c++14 hello_world.cpp
+-a.out hello_world.cpp
+-./a.out
